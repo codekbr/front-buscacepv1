@@ -1,22 +1,26 @@
 # front-buscacep Vue 3 
+Certifique estar rodando tanto o back-end laravel para que ele consuma a API.
 
-Obs: Certifique estar rodando tanto o back-end laravel para que ele consuma a API.
-Segue o link do projeto laravel -> https://github.com/codekbr/buscaCepv1
+Segue o link do projeto laravel:
+```
+https://github.com/codekbr/buscaCepv1a
+```
 
 ## Instalar todas dependências do projeto.
+No terminal execute
 ```
 npm install
 ```
 
 ## Arquivo .env
 
-no projeto crie um arquivo chamado .env e adicione as seguinte linha.
+no projeto crie um arquivo na pasta raiz do projeto chamado .env e copie a seguinte linha.
+```
+VUE_APP_ROOT_API=http://localhost:8000 
 ```
 
-VUE_APP_ROOT_API=http://localhost:8000 // Esse será a baseURL do endpoint da api, para as requisições no laravel.
-```
-
-### Compile e aguarde
+### Compile
+No terminal execute
 ```
 npm run serve
 ```
