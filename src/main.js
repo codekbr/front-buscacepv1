@@ -11,6 +11,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueMask from '@devindex/vue-mask'; // <-- ADD THIS LINE
 
+
 const app = createApp(App)
 app.use(router)
 app.use(Quasar, {
@@ -21,5 +22,7 @@ app.use(Quasar, {
 }, quasarUserOptions)
 app.use(VueAxios, axios)
 app.use(VueMask)
+app.config.globalProperties.$axios = axios;
+axios.defaults.baseURL = process.env.baseURL || process.env.VUE_APP_ROOT_API || '';
 app.mount('#app')
 

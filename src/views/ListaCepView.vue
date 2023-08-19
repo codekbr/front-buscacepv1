@@ -197,7 +197,7 @@ export default {
       'TO',
     ];
     const salvarNovoEndereco = async () => {
-      axios.post('http://localhost:8000/api/ceps', novo.value)
+      axios.post('api/ceps', novo.value)
       .catch(async (error) => {
           console.log(error.response.data.message);
           
@@ -221,7 +221,7 @@ export default {
     }
 
     const editarEnderecoExistente = (id) => {
-      axios.put(`http://localhost:8000/api/ceps/${id}`, items.value)
+      axios.put(`/api/ceps/${id}`, items.value)
       .catch(async (error) => {
           $q.notify({
               color: 'red',
@@ -250,7 +250,7 @@ export default {
     }); 
   
     const fetchMoreRecords = async (start) => {
-      const response = await axios.get(`http://localhost:8000/api/ceps?start=${start}`);
+      const response = await axios.get(`/api/ceps?start=${start}`);
       return await response.data;
     };
 
@@ -283,7 +283,7 @@ export default {
           color: "red"
         }
       }).onOk(async () => {
-        const request = await axios.delete(`http://localhost:8000/api/ceps/${obj.id}`);
+        const request = await axios.delete(`/api/ceps/${obj.id}`);
         if (request) {
           displayedRecords.value.splice(displayedRecords.value.findIndex(e => e.id === obj.id), 1);
           loading.value =true;

@@ -82,7 +82,7 @@ export default {
         ];
         
         const buscaCep = () => {
-            const meubanco = `http://localhost:8000/api/ceps/${dados.value.cep}`;
+            const meubanco = `/api/ceps/${dados.value.cep}`;
             axios.get(meubanco).then((res) => {
                 const naoAchouRS = Object.keys(res.data).length === 0;
                 if (!naoAchouRS) {
@@ -105,7 +105,7 @@ export default {
                             dados.value.city = response.data.localidade;
                             dados.value.rua = response.data.logradouro;
                             dados.value.uf = response.data.uf;
-                            axios.post('http://localhost:8000/api/ceps', dados.value);
+                            axios.post('/api/ceps', dados.value);
                             $q.notify({
                                 color: 'green',
                                 message: 'Cadastrado na base de dados para próxima consulta.',
