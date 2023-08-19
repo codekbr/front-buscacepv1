@@ -1,5 +1,5 @@
 # front-buscacep Vue 3 
-Certifique estar rodando tanto o back-end laravel para que ele consuma a API.
+Certifique estar executando o back-end laravel para que ele consuma a API.
 
 Segue o link do projeto laravel:
 ```
