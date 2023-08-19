@@ -51,6 +51,7 @@
       :toolbartitle="'Editando Cep: ' + items.cep"
       :showDialog="dialogEditar"
       @close-dialog="dialogEditar = false"
+      persistent
     >
       <q-form
         class="q-gutter-md"
@@ -97,6 +98,7 @@
       :toolbartitle="'Novo Endereço'"
       :showDialog="dialogNovo"
       @close-dialog="dialogNovo = false" 
+      persistent
     >
     <q-form
         class="q-gutter-md"
