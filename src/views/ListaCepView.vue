@@ -85,7 +85,7 @@
           lazy-rules
           hint="Esse campo é obrigatório *"
         />
-         <q-select v-model="novo.uf" :options="options" filled hint="Esse campo é obrigatório *" label="UF" />
+         <q-select v-model="items.uf" :options="options" filled hint="Esse campo é obrigatório *" label="UF" />
         <div class="row">
           <q-space/>
           <q-btn label="Salvar" type="button" @click="editarEnderecoExistente(items.id)" color="positive"/>
