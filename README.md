@@ -1,24 +1,26 @@
-# front-buscacep
+# front-buscacep Vue 3 
 
-## Project setup
+Obs: Certifique estar rodando tanto o back-end laravel para que ele consuma a API.
+Segue o link do projeto laravel -> https://github.com/codekbr/buscaCepv1
+
+## Instalar todas dependências do projeto.
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Arquivo .env
+
+```
+no projeto crie um arquivo chamado .env e adicione as seguintes linhas.
+VUE_APP_ROOT_API=http://localhost:8000 // Esse será a baseURL do endpoint da api, para as requisições no laravel.
+```
+
+### Compile e aguarde
 ```
 npm run serve
+Após basta acessar a url definida com a porta geralmente é http://localhost:8080
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
