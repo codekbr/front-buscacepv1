@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh lpR fFf" class="bg-grey-1">
+  <q-layout view="hHh Lpr fFf" class="bg-grey-1">
     <q-header elevated class="bg-white text-grey-8 q-py-xs" height-hint="58">
       <q-toolbar>
         <q-btn
@@ -19,14 +19,6 @@
         </q-btn>
         <q-space />
         <q-space />
-        <div class="q-gutter-sm row items-center no-wrap">
-          <q-btn round dense flat color="grey-8" icon="notifications">
-            <q-badge color="red" text-color="white" floating>
-              2
-            </q-badge>
-            <q-tooltip>Notifications</q-tooltip>
-          </q-btn>
-        </div>
       </q-toolbar>
     </q-header>
     <q-drawer
@@ -80,8 +72,8 @@ export default {
       toggleLeftDrawer,
 
       links1: [
-        { icon: 'list', text: `Todos`, path:"/" },
-        { icon: 'search', text: `Buscar`, path:"/about" },
+        { icon: 'list', text: `Todos`, path:"/lista" },
+        { icon: 'search', text: `Buscar Endereços`, path:"/search" },
       ],
       
     }
